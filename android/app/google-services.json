@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "576991338990",
+    "firebase_url": "https://diario-3ee0d-default-rtdb.firebaseio.com",
+    "project_id": "diario-3ee0d",
+    "storage_bucket": "diario-3ee0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576991338990:android:2e4970eb4a49f6f0202eff",
+        "android_client_info": {
+          "package_name": "com.isc.diario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576991338990-9kjo0710clf4jlkjjnaoc020n0pksa84.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.isc.diario",
+            "certificate_hash": "70143c362dfacabd34785634968df53f5cf0943e"
+          }
+        },
+        {
+          "client_id": "576991338990-v2uootdbdk1f2bf059ht3c8qovcm5dj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjxCzb-WnNGNYyOeyljYPA5XuCui_5QpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576991338990-v2uootdbdk1f2bf059ht3c8qovcm5dj2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "576991338990-8njppu491njkl3qfh8iplbabdvbikm35.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tecmante.diario.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576991338990:android:6bedcba58960b7c6202eff",
+        "android_client_info": {
+          "package_name": "com.tec.diario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576991338990-v2uootdbdk1f2bf059ht3c8qovcm5dj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjxCzb-WnNGNYyOeyljYPA5XuCui_5QpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576991338990-v2uootdbdk1f2bf059ht3c8qovcm5dj2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "576991338990-8njppu491njkl3qfh8iplbabdvbikm35.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tecmante.diario.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576991338990:android:9739dbc36792fb11202eff",
+        "android_client_info": {
+          "package_name": "com.tecmante.diario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576991338990-juvamnvhckmv58o62c4ssjb0e1c2cddq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tecmante.diario",
+            "certificate_hash": "4af34b91d88aafda32a16db19de377b597cb1666"
+          }
+        },
+        {
+          "client_id": "576991338990-v2uootdbdk1f2bf059ht3c8qovcm5dj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjxCzb-WnNGNYyOeyljYPA5XuCui_5QpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576991338990-v2uootdbdk1f2bf059ht3c8qovcm5dj2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "576991338990-8njppu491njkl3qfh8iplbabdvbikm35.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tecmante.diario.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
