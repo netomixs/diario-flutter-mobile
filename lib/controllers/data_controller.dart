@@ -25,7 +25,7 @@ class DataController {
   static Future<Usuario> loadUser() async {
     try {
       String? id = DataController.idUser();
- 
+
       Map<String, dynamic>? object =
           await RealTimeServices.load("usuarios/$id/");
       Usuario usuario = Usuario.fromJson(object!);
@@ -33,6 +33,24 @@ class DataController {
       return usuario;
     } catch (e) {
       return Usuario("", "", "", "", "");
+    }
+  }
+
+  static Future<bool> createExperimento(Experimento experimento) async {
+    try {
+      String? idExperimento = experimento.id;
+          String? idUser = experimento.usuario;
+      String route = "data/$idUser/experimentos/$idExperimento";
+      Map<String, dynamic> jsonData = experimento.toJson();
+      var response = await RealTimeServices.crate(route, jsonData);
+      if (response) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      print(e);
+      return false;
     }
   }
 
@@ -142,7 +160,7 @@ class DataController {
     try {
       String? userID = idUser();
       Map<dynamic, dynamic>? data =
-          await RealTimeServices.loadList("$userID/experimentos");
+          await RealTimeServices.loadList("data/$userID/experimentos");
       for (var experimentoElement in data!.keys) {
         Map<dynamic, dynamic> jsonData = data[experimentoElement];
         Experimento experimento =
@@ -167,7 +185,7 @@ class DataController {
       if (listaExperimento.isNotEmpty) {
         listaExperimento = ordenarPorId(listaExperimento);
       }
-     // saveLocal(listaExperimento);
+      // saveLocal(listaExperimento);
       return listaExperimento;
     } catch (e) {
       //  print("Lista");
@@ -195,6 +213,8 @@ class DataController {
     return id;
   }
 }
+
+
   // static List<Experimento> loadExperimento(String iduser) async {
   //   try {
   //      List<Experimento> lista;

@@ -32,9 +32,9 @@ Future<FirebaseApp> inicializateFirebase() async {
   FirebaseApp firebaseApp = (await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   ));
-  FirebaseDatabase.instance
-      .setPersistenceEnabled(true); // Habilitar la persistencia
 
+  FirebaseDatabase.instance
+      .setPersistenceEnabled(true); // Habilitar la  
   return firebaseApp;
 }
 

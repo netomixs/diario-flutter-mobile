@@ -9,7 +9,6 @@ class Usuario {
   String? apellidoM = "";
   String? correo = "";
   String? id = "0";
-
    Usuario(this.nombre, this.apellidoP, this.apellidoM, this.correo,
      this.id);
 

@@ -19,6 +19,28 @@ class RealTimeServices {
     }
   }
 
+  static Future<bool> crate(String route, Map<String, dynamic> jsonData) async {
+    try {
+      DatabaseReference ref = FirebaseDatabase.instance.ref(route);
+      await ref.set(jsonData);
+      return true;
+    } catch (e) {
+         print("----------------------");
+      print(e);
+      return false;
+    }
+  }
+
+  static Future<bool> update(String route, Map<String, dynamic> jsonData) async {
+    try {
+      DatabaseReference ref = FirebaseDatabase.instance.ref(route);
+      await ref.update(jsonData);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   static Future<Map<String, dynamic>?> load(String route) async {
     try {
       final ref = FirebaseDatabase.instance.ref();

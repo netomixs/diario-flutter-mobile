@@ -17,7 +17,7 @@ class ExperimentoController {
         listaHojaMediciones: [],
         listaParcelas: [],
         listaVariedades: []);
-    await DataController.saveExperimento(experimento);
+    await DataController.createExperimento(experimento);
   }
 
   static String getIdByDate() {
