@@ -59,8 +59,11 @@ class _RegistrosListScreenState extends State<RegistrosListScreen> {
               children: [
                 Expanded(
                   child: RefreshIndicator(
-                      onRefresh: (() =>
-                          DataController.getHojasMedicion(widget.experimento)),
+                      onRefresh: ( <HojaMedicion>() async {
+                     
+                        return await DataController.getHojasMedicion(
+                            widget.experimento);
+                      }),
                       child: ListView.separated(
                         shrinkWrap: true,
                         padding: const EdgeInsets.all(10),
@@ -79,6 +82,7 @@ class _RegistrosListScreenState extends State<RegistrosListScreen> {
                             DataController.saveHojaNedicion(
                                 listaHojas[index], route);
                           }
+
                           //    print(porcentaje);
                           return ElementRegistro(
                               mesCrecimiento: listaHojas[index].mesCrecimiento,
@@ -136,6 +140,7 @@ class _RegistrosListScreenState extends State<RegistrosListScreen> {
   }
 
   Future<void> _actualizarListaExperimentos() async {
+    print("asdasda");
     try {
       setState(() {
         isLoad = true;
@@ -150,12 +155,12 @@ class _RegistrosListScreenState extends State<RegistrosListScreen> {
         });
       }
     } catch (error) {
-      // print("Error el catch");
-      // print(error);
+       print("Error el catch");
+     print(error);
     } finally {
       try {} catch (e) {
-        //  print("-----------------------------");
-        //  print(e);
+          print("-----------------------------");
+     print(e);
       }
     }
   }

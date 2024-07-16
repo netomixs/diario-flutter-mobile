@@ -37,7 +37,7 @@ class RegistrarDataContoller {
       required Registro registro}) {
     try {
       totalTallos = 0;
-      registro.completado = true;
+      //registro.completado = true;
       registro.listaSurcos![0].cantidad_tallos = int.parse(surco3Text.text);
       registro.listaSurcos![1].cantidad_tallos = int.parse(surco4Text.text);
       registro.parcela = parcela.id;
@@ -60,7 +60,7 @@ class RegistrarDataContoller {
       promedioTallos = totalTallos / 10;
       registro.promedio = promedioTallos;
       hojaMedicion.listaRegistros![index] = registro;
-    // ignore: empty_catches
+      // ignore: empty_catches
     } catch (e) {}
   }
 

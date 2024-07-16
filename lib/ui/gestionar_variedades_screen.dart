@@ -60,8 +60,7 @@ class _GestionarVariedadesState extends State<GestionarVariedades> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Card(
-                  child: Column(
+               Column(
                     children: [
                       InputText(
                         hintText: "Tratameinto",
@@ -235,7 +234,7 @@ class _GestionarVariedadesState extends State<GestionarVariedades> {
                       )
                     ],
                   ),
-                ),
+                
                 Expanded(
                     child: Card(
                 

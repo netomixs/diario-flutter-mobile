@@ -47,13 +47,30 @@ class _RegistrosScreenState extends State<RegistrosScreen> {
         parcel: widget.parcela,
         experiment: widget.experimento);
     registro = regsitroController.getDataOld();
-    setDataOnText();
+    // setDataOnText();
+    if (registro.completado) {
+      try {
+        surco3Controller.text = "${registro.listaSurcos![0].cantidad_tallos}";
+        surco4Controller.text = "${registro.listaSurcos![1].cantidad_tallos}";
+        for (var i = 0; i < 5; i++) {
+          talloController[i].text =
+              "${registro.listaSurcos![0].tallosLista![i].medida}";
+        }
+        //   print(registro.listaSurcos![1].tallosLista!.length);
+        for (var i = 0; i < 5; i++) {
+          talloController[i + 5].text =
+              "${registro.listaSurcos![1].tallosLista![i].medida}";
+        }
+      } catch (e) {
+        // print(e);
+      }
+    }
     super.initState();
   }
 
   void setDataOnText() {
     _dataChanged = true;
-    try {
+    /*  try {
       surco3Controller.text = "${registro.listaSurcos![0].cantidad_tallos}";
       surco4Controller.text = "${registro.listaSurcos![1].cantidad_tallos}";
       for (var i = 0; i < 5; i++) {
@@ -67,7 +84,7 @@ class _RegistrosScreenState extends State<RegistrosScreen> {
       }
     } catch (e) {
       // print(e);
-    }
+    }*/
   }
 
   @override
@@ -380,11 +397,11 @@ class _RegistrosScreenState extends State<RegistrosScreen> {
                           isload: isload,
                           text: "Confirmar",
                           onPressed: () async {
-                            setState(() {
-                              isload = true;
-                            });
                             bool isConnect = false;
                             if (formKey.currentState!.validate()) {
+                              setState(() {
+                                isload = true;
+                              });
                               try {
                                 // Establecer un tiempo de espera máximo (por ejemplo, 30 segundos)
 
