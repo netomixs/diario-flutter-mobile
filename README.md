@@ -1,6 +1,6 @@
 # diario
 
-A new Flutter project.
+Front que recuoera datos desde firebase en tiempo real, y los muestra con un idicador la calidad del agua. Los datos son registrados por un sensor externo
 
 ## Getting Started
 
